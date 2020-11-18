@@ -1,0 +1,14 @@
+
+{
+    "name": "IndikMais",
+    "description": "Aplicação para salvar dados de contato em planilha Google",
+    "authors": [
+        {
+            "name": "Keiler Trindade",
+            "email": "keiler.trindade@portalf.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.8"
+    }
+}

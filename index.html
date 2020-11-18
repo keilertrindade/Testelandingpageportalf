@@ -43,7 +43,7 @@
             <a class="nav-link" href="#feedback-section">Testimonials</a>
           </li>
           <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact Us</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" id="btnModal">Contact Us</button>
           </li>
         </ul>
       </div>
@@ -330,7 +330,7 @@
             <h4 class="pt-1" data-aos="fade-down">Contact us</h4>
           </div>
           <div data-aos="fade-up">
-            <button class="btn btn-rounded btn-outline-danger">Contact us</button>
+            <button class="btn btn-rounded btn-outline-danger" onClick="document.getElementById('btnModal').click();">Contact us</button>
           </div>          
         </div>
       </section>
@@ -347,10 +347,10 @@
             <h5 class="pb-2">Get in Touch</h5>
             <p class="text-muted">Don’t miss any updates of our new templates and extensions.!</p>
             <form>
-              <input type="text" class="form-control" id="Email" placeholder="Email id">
+              <input type="text" class="form-control" id="EmailSubscribe" placeholder="Email id">
             </form>
             <div class="pt-3">
-              <button class="btn btn-dark">Subscribe</button>
+              <button class="btn btn-dark" onclick="return Subscribe()">Subscribe</button>    <!-- Comentário de botão submit -->
             </div>   
           </div>
           <div class="col-12 col-md-6 col-lg-3 grid-margin">
@@ -385,22 +385,22 @@
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="Name">Name</label>
-                  <input type="text" class="form-control" id="Name" placeholder="Name">
+                  <label for="Nome">Nome</label>
+                  <input type="text" class="form-control" id="Nome" placeholder="Nome">
                 </div>
                 <div class="form-group">
                   <label for="Email">Email</label>
                   <input type="email" class="form-control" id="Email-1" placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <label for="Message">Message</label>
-                  <textarea class="form-control" id="Message" placeholder="Enter your Message"></textarea>
+                  <label for="Telefone">Telefone</label>
+                  <input type="tel" class="form-control" id="Telefone" placeholder="(00)0000-0000" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success">Submit</button>
+              <button type="button" class="btn btn-success" onclick="return Planilha()">Submit</button>
             </div>
           </div>
         </div>
@@ -412,5 +412,62 @@
   <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
   <script src="vendors/aos/js/aos.js"></script>
   <script src="js/landingpage.js"></script>
+  <script src="https://code.jquery.com/jquery-1.7.js"></script>
+  
+  <script>
+	function Subscribe() {
+		var mail = document.getElementById('EmailSubscribe').value;
+		if (!mail){
+			alert("Por Favor digite um e-mail válido");
+			return false;
+		}
+	  $.ajax({
+	  url:'mail.php',
+	  type:'POST',
+	  data:{'email':mail},
+      complete: function (response) {
+        alert(response.responseText);
+      },
+      error: function () {
+          alert('Erro');
+      }
+  });  
+  return false;
+}
+
+
+
+	function Planilha(){
+		var nome = document.getElementById('Nome').value;
+		var mail = document.getElementById('Email-1').value;
+		var telefone = document.getElementById('Telefone').value;
+		
+		if (!mail){
+			alert("Por Favor digite um e-mail válido");
+			return false;
+		} else if (!nome){
+			alert("Por Favor digite um nome válido");
+			return false;
+		}else if (!telefone){
+			alert("Por Favor digite um telefone válido");
+			return false;
+		}
+		
+	  $.ajax({
+	  url:'sheets.php',
+	  type:'POST',
+	  data:{'email':mail,'nome':nome,'telefone':telefone},
+      complete: function (response) {
+        alert(response.responseText);
+      },
+      error: function () {
+          alert('Erro');
+      }
+  });  
+  return false;
+
+	}
+  </script>
+  
 </body>
 </html>
