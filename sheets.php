@@ -9,9 +9,6 @@ $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $nome = $_POST['nome'];
 
-echo "E-mail: ".$email . "\nNome: " .$nome. "\nTelefone: " .$telefone . "\nData: ".$date;
-
-
 $service_account_file = 'credenciais.json';
 
 $client = new Google_Client();
@@ -23,14 +20,31 @@ $client->setAuthConfig('credenciais.json');
 $service = new Google_Service_Sheets($client);
 //var_dump($service);
 
-$spreadsheetId = '1oY1ks3sX4dzrHl7Q4VwyrkpKLqUY36Z4cz3OJ2uo7_E'; //It is present in your URL
-$get_range = 'Dados!A1:D5'; // Posso colocar apenas 'Dados' para pegar todo o conteúdo dela. Ainda não sei se preciso de range pra poder inserir os dados
+$spreadsheetId = '1oY1ks3sX4dzrHl7Q4VwyrkpKLqUY36Z4cz3OJ2uo7_E';
+$range = 'Dados!A2:D2102';
 
-$response = $service->spreadsheets_values->get($spreadsheetId, $get_range);
-/*$values = $response->getValues();
+$values = [[$date, $nome, $email, $telefone]];
+
+$body = new Google_Service_Sheets_ValueRange([
+    'values' => $values
+]);
+
+$params = [
+    'valueInputOption' => "RAW"
+];
+
+$result = $service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
+
+/*$response = $service->spreadsheets_values->get($spreadsheetId, $get_range);
+$values = $response->getValues();
+
+print_r($values);
 
 $numRows = $response->getValues() != null ? count($response->getValues()) : 0;
-printf("%d rows retrieved.", $numRows);
+printf("\n%d rows retrieved.", $numRows);
 */
+
+
+echo "Dados cadastrados com sucesso! Entraremos em contato o mais rápido possível!\n\nE-mail: ".$email . "\nNome: " .$nome. "\nTelefone: " .$telefone . "\nData: ".$date;
 
 ?>
