@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';
 
 date_default_timezone_set('America/Bahia');
-$date = date('m/d/Y h:i:s a', time());
+$date = date('d/m/Y H:i:s', time());
 
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
