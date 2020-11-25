@@ -409,74 +409,11 @@
     </div> 
   </div>
   <script src="vendors/jquery/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="vendors/jquery/jquery-1.9.1.js"></script>
   <script src="vendors/bootstrap/bootstrap.min.js"></script>
   <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
   <script src="vendors/aos/js/aos.js"></script>
   <script src="js/landingpage.js"></script>
-
-  
-  <script>
-	function Subscribe() {	
-		var mail = document.getElementById('EmailSubscribe').value;
-		if (!mail){
-			alert("Por Favor digite um e-mail válido");
-			return false;
-		}
-	  $.ajax({
-	  url:'mail.php',
-	  type:'POST',
-	  data:{'email':mail},
-      complete: function (response) {
-        alert(response.responseText);		
-      },
-      error: function () {
-          alert('Erro');
-      }
-  });
-  
-  return false;
-}
-
-
-	function Planilha(){
-		var nome = document.getElementById('Nome').value;
-		var mail = document.getElementById('Email-1').value;
-		var telefone = document.getElementById('Telefone').value;
-		
-		if (!mail){
-			alert("Por Favor digite um e-mail válido");
-			return false;
-		} else if (!nome){
-			alert("Por Favor digite um nome válido");
-			return false;
-		}else if (!telefone){
-			alert("Por Favor digite um telefone válido");
-			return false;
-		}
-		
-	  $.ajax({
-	  url:'sheets.php',
-	  type:'POST',
-	  data:{'email':mail,'nome':nome,'telefone':telefone},
-      complete: function (response) {
-        alert(response.responseText);
-		$( "#closeModalBtn" ).click();
-	      },
-      error: function () {
-          alert('Erro');
-      }
-		}); 
-
-  return false;
-}
-
-	function resetModal(){
-		document.getElementById('Nome').value='';
-		document.getElementById('Email-1').value='';
-		document.getElementById('Telefone').value='';
-	}
-  </script>
-  
+  <script src="js/functions.js"></script>
 </body>
 </html>

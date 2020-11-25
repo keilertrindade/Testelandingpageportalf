@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
 date_default_timezone_set('America/Bahia');
 $date = date('d/m/Y H:i:s', time());
