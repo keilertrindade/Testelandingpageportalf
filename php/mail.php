@@ -26,7 +26,7 @@ if ( isset( $_POST['email']))
  
  
  // DADOS DO REMETENTE
- $mail->Sender = ('sender@portalf.com.br'); // Conta de email existente e ativa em seu domínio
+ $mail->Sender=('sender@portalf.com.br'); // Conta de email existente e ativa em seu domínio
  $mail->setFrom('sender@portalf.com.br', 'IndikMais'); // Sua conta de email que será remetente da mensagem
  //$mail->FromName = "IndikMais"; // Nome da conta de email
  // DADOS DO DESTINATÁRIO
