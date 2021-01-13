@@ -45,6 +45,6 @@ printf("\n%d rows retrieved.", $numRows);
 */
 
 
-echo "Dados cadastrados com sucesso! Entraremos em contato o mais rápido possível!\n\nE-mail: ".$email . "\nNome: " .$nome. "\nTelefone: " .$telefone . "\nData: ".$date;
+echo "Dados cadastrados com sucesso!  Entraremos em contato o mais rápido possível!";
 
 ?>

@@ -70,7 +70,7 @@
             <a class="nav-link" href="#feedback-section">Depoimentos</a>
           </li>
           <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Fale Conosco</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal" id="btnModal">Fale Conosco</button>
           </li>
         </ul>
       </div>
@@ -83,11 +83,15 @@
       <!-- <h1 class="font-weight-semibold">sentado no sofá? Seja um  INDIK’S.</h1> -->
       <h6 class="font-weight-normal text-muted pb-3">Faça parte do Programa <strong>INDIK MAIS</strong> conquiste uma renda extra sem sair de casa e ajude pessoas indicando os melhores cursos de atualização profissional do Brasil!</h6>
       <div>
-        <a href="#INDICAÇÃO">
+      
+	  <a href="#ganhedinheiro">
         <button class="btn btn-opacity-light mr-1">Ganhe Dinheiro</button>
-        </a>        <a href="#INDICAÇÃO">
+      </a>        
+		
+		<a href="#indicacao">
         <button class="btn btn-opacity-success ml-1">Indicação</button>
-      </a>      </div>
+      </a>      
+	  </div>
       <img src="images/Group171.svg" alt="" class="img-fluid">
     </div>
   </div>
@@ -95,7 +99,7 @@
     <div class="container">
       <section class="features-overview" id="features-section" >
         <div class="content-header">
-          <h3>VOCÊ NÃO SABE MAIS O QUE FAZER PARA AUMENTAR SUA RENDA MENSAL SEM DOR DE CABEÇA?</h3>
+          <h3><a name="ganhedinheiro">VOCÊ NÃO SABE MAIS O QUE FAZER PARA AUMENTAR SUA RENDA MENSAL SEM DOR DE CABEÇA?</a></h3>
           <h6 class="section-subtitle text-muted">Não passe mais por isso. Para ver sua vida financeira melhorar, você só precisa entrar num programa seguro de afiliação onde você ganha lucros reais por indicações de alunos e participações especiais em eventos da PORTAL F.</h6>
         
 		<br><br>
@@ -131,16 +135,15 @@
       <section class="digital-marketing-service" id="digital-marketing-section">
         <div class="row align-items-center">
           <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">
-            <h4 class="m-0">É FÁCIL SE TORNAR UM INDIK’S!<br>
-            </h4>
+            <h4 class="m-0"><a name="indicacao">É FÁCIL SE TORNAR UM INDIK’S!<br></a></h4>
             <div class="col-lg-7 col-xl-6 p-0">
-              <p class="py-4 m-0 text-muted" align="justify"><strong><a id="INDICAÇÃO2"></a></strong>ICONE 01 - Faça o seu cadastro através do preenchimento do formulário, inserindo todas as informações necessárias. <br><br>
+              <p class="py-4 m-0 text-muted" align="justify">	&#10004; - Faça o seu cadastro através do preenchimento do formulário, inserindo todas as informações necessárias. <br><br>
 
-		ICONE  O2 - Seu cadastro será analisado e você receberá aprovação via e-mail e/ ou WhatsApp, além de termo de aceite e informações complementares.<br><br>
+			&#10004; - Seu cadastro será analisado e você receberá aprovação via e-mail e/ ou WhatsApp, além de termo de aceite e informações complementares.<br><br>
 
-		ICONE 03 - Com acesso ao seu portal e demais orientações, você poderá copiar seu link de indicação, divulgar para seus contatos e traçar estratégias para lucrar mais!<br><br>
+			&#10004; - Com acesso ao seu portal e demais orientações, você poderá copiar seu link de indicação, divulgar para seus contatos e traçar estratégias para lucrar mais!<br><br>
 
-		ICONE 04  - Após o recebimento da aprovação e dos primeiros passos, você também receberá seus dados de acesso para o Portal do <strong>INDIK MAIS</strong>.<br><br>
+			&#10004;  - Após o recebimento da aprovação e dos primeiros passos, você também receberá seus dados de acesso para o Portal do <strong>INDIK MAIS</strong>.<br><br>
 		<strong>Pronto você já é um INDIK’S.</strong>
 </p></div>    
           </div>
@@ -153,7 +156,7 @@
             <img src="images/Group2.png" alt="" width="449" height="536" class="img-fluid">
           </div>
           <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">
-            <h4 class="m-0">QUEM É O PORTAL F ? É o Portal do seu futuro!<br>
+            <h4 class="m-0">Quem é o PORTAL F ? É o Portal do seu futuro!<br>
             </h4>
             <div class="col-lg-9 col-xl-8 p-0">
               <p class="py-4 m-0 text-muted" align="justify"><a id="INDICAÇÃO"></a>Com quase 20 anos de mercado, a Portal F é considerada uma das maiores empresas do segmento de Centros Educacionais e Cursos livres do Nordeste, além de contar com a parceria de universidades renomadas em todo o país para o oferecimento de Cursos de Pós-graduação.
@@ -163,7 +166,7 @@
 			  Cadastre-se agora no <strong>INDIK’S</strong> e dê o primeiro passo para melhorar sua vida financeira!
 			  </p>
             </div>
-            <button class="btn btn-info">Cadastre-se</button>
+            <button class="btn btn-info" onClick="document.getElementById('btnModal').click();">Cadastre-se</button>
           </div>
         </div>
       </section>     
@@ -304,7 +307,7 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img src="images/face15.jpg" width="89" height="89" alt="" class="img-customer">
-                    <p class="m-0 py-3 text-muted">Fiz uma viagem para o exterior como INDIK´S, hoje pretendo atualizar-me profissional mente na PORTAL F e preparar-me morar nos Estados Unidos.</p>
+                    <p class="m-0 py-3 text-muted">Fiz uma viagem para o exterior como INDIK´S, hoje pretendo atualizar-me profissionalmente na PORTAL F e preparar-me morar nos Estados Unidos.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">Marco Luiz </h6>
                     <h6 class="customer-designation text-muted m-0">Gerente de Marketing<br><br></h6>
@@ -314,7 +317,7 @@
               <div class="card customer-cards">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="images/face16.jpg" width="89" height="89" alt="" class="img-customer">
+                    <img src="images/face4.jpg" width="89" height="89" alt="" class="img-customer">
                     <p class="m-0 py-3 text-muted">Pago meus livros, apostilas e toda logística que a graduação exige sendo um INDIK´S da PORTAL F.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">Beatriz Lambert </h6>
@@ -325,7 +328,7 @@
               <div class="card customer-cards">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="images/face1.jpg" width="89" height="89" alt="" class="img-customer">
+                    <img src="images/face5.jpg" width="89" height="89" alt="" class="img-customer">
                     <p class="m-0 py-3 text-muted">Sou autônoma e trabalho na internet vendendo produtos de parceiros, vivo destas vendas. O INDIKMAIS da PORTAL F corresponde a 60% do meu faturamento de vendas - também sou um INDIK´S.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">Joana Santana</h6>
@@ -336,7 +339,7 @@
               <div class="card customer-cards">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="images/face2.jpg" width="89" height="89" alt="" class="img-customer">
+                    <img src="images/face7.jpg" width="89" height="89" alt="" class="img-customer">
                     <p class="m-0 py-3 text-muted">Sou professor dos cursos livres da PORTAL F, também sou um INDIK´S visto que tenho sido procurado para indicar cursos na área de TI.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">Kaio Felipe</h6>
@@ -347,7 +350,7 @@
               <div class="card customer-cards">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="images/face3.jpg" width="89" height="89" alt="" class="img-customer">
+                    <img src="images/face9.jpg" width="89" height="89" alt="" class="img-customer">
                     <p class="m-0 py-3 text-muted">Sou INDIK´S pra fazer um extra, trabalho uma hora por dia, durante a noite com objetivo de fazer uma poupança para o futuro.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">Valeria Luz</h6>
@@ -358,7 +361,7 @@
               <div class="card customer-cards">
                 <div class="card-body">
                   <div class="text-center">
-                    <img src="images/face20.jpg" width="89" height="89" alt="" class="img-customer">
+                    <img src="images/face6.jpg" width="89" height="89" alt="" class="img-customer">
                     <p class="m-0 py-3 text-muted">Vi o anuncio do Programa INDIKMAIS nas redes sociais, me cadastrei e comecei a ganhar dinheiro. Não parei mais, me tornei um INDIK´S.</p>
                     <div class="content-divider m-auto"></div>
                     <h6 class="card-title pt-3">João Vitor</h6>
@@ -398,11 +401,10 @@
           </div>
           <div class="col-12 col-md-6 col-lg-3 grid-margin">
             <h5 class="pb-2">Nossas Diretrizes</h5>
-            <a href="#"><p class="m-0 pb-2">Termo de Adesão</p></a>   
-            <a href="#" ><p class="m-0 pt-1 pb-2">Politicas de Privacidade</p></a> 
-            <a href="#"><p class="m-0 pt-1 pb-2">Politicas de Cookie</p></a> 
-            <a href="#">
-            <p class="m-0 pt-1">Detalhes</p></a> 
+            <a href="diretrizes.html#duvidasfrequentes"><p class="m-0 pb-2">Perguntas Frequentes</p></a>   
+            <a href="termodeadesao.pdf" target="_blank"><p class="m-0 pt-1 pb-2">Termo de Adesão</p></a> 
+            <a href="diretrizes.html#politicasprivacidade"><p class="m-0 pt-1 pb-2">Politicas de Privacidade</p></a> 
+            <a href="diretrizes.html#politicascookie"><p class="m-0 pt-1">Politicas de Cookies</p></a> 
           </div>
           <div class="col-12 col-md-6 col-lg-3 grid-margin">
               <h5 class="pb-2">Nosso endereço</h5>
@@ -419,7 +421,7 @@ CEP 41730-101 - Salvador/BA
         </div>  
       </section>
       <footer class="border-top">
-        <p class="text-center text-muted pt-4">Copyright © 2019<a href="https://www.bootstrapdash.com/" class="px-1">Bootstrapdash.</a>All rights reserved.</p>
+        <p class="text-center text-muted pt-4">Copyright © 2021 Todos os direitos reservados.</p>
       </footer>
       <!-- Modal for Contact - us Button -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -440,7 +442,7 @@ CEP 41730-101 - Salvador/BA
                 </div>
                 <div class="form-group">
                   <label for="Message">Celular</label>
-                  <input type="tel" class="form-control" id="Telefone" placeholder="(00)0000-0000" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                  <input type="tel" class="form-control" id="Telefone" placeholder="(00) 0000-0000" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                 </div>
               </form>
             </div>

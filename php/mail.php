@@ -29,10 +29,10 @@ if ( isset( $_POST['email']))
  $mail->Sender=('sender@portalf.com.br'); // Conta de email existente e ativa em seu domínio
  $mail->setFrom('sender@portalf.com.br', 'IndikMais'); // Sua conta de email que será remetente da mensagem
  //$mail->FromName = "IndikMais"; // Nome da conta de email
- // DADOS DO DESTINATÁRIO
+ //DADOS DO DESTINATÁRIO
  
  
- $mail->AddAddress('keiler.trindade@portalf.com.br'); // Define qual conta de email receberá a mensagem
+ $mail->AddAddress('indikmais@portalf.com.br'); // Define qual conta de email receberá a mensagem
  //$mail->AddAddress('recebe2@dominio.com.br'); // Define qual conta de email receberá a mensagem
  //$mail->AddCC('copia@dominio.net'); // Define qual conta de email receberá uma cópia
  //$mail->AddBCC('copiaoculta@dominio.info'); // Define qual conta de email receberá uma cópia oculta
